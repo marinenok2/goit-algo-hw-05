@@ -3,7 +3,7 @@ import re
 
 def generator_numbers(text):
     # Знаходимо числа з крапкою. Поки що це рядки.
-    numbers = re.findall(r"\d+\.\d+", text)
+    numbers = re.findall(r"(?<= )\d+\.\d+(?= )", text)
 
     # Перетворюємо кожен рядок на число й віддаємо по одному.
     for number in numbers:
